@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mohamed Tharik — Data Analyst & Web Developer. Building beautiful digital experiences with data-driven insights. Based in Chennai, India.">
+  <meta name="keywords" content="Data Analyst, Business Analyst, Power BI, Python, SQL, Portfolio, Chennai">
+  <meta name="author" content="Mohamed Tharik">
+  <meta name="theme-color" content="#050505">
+  <meta property="og:title" content="Mohamed Tharik | Data Analyst Portfolio">
+  <meta property="og:description" content="Transforming raw data into actionable business insights through dashboards, visualizations, and data-driven reporting.">
+  <meta property="og:type" content="website">
+  <title>Mohamed Tharik | Data Analyst Portfolio</title>
+
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==================== LOADING SCREEN ==================== -->
+  <div id="loader" class="loader" aria-hidden="true">
+    <div class="loader__inner">
+      <div class="loader__logo">
+        <span class="loader__logo-text">MT</span>
+      </div>
+      <div class="loader__bar">
+        <div class="loader__bar-fill"></div>
+      </div>
+      <p class="loader__text">Loading experience</p>
+    </div>
+  </div>
+
+  <!-- ==================== CUSTOM CURSOR (Desktop) ==================== -->
+  <div class="cursor cursor--dot" aria-hidden="true"></div>
+  <div class="cursor cursor--ring" aria-hidden="true"></div>
+
+  <!-- ==================== SCROLL PROGRESS ==================== -->
+  <div class="scroll-progress" aria-hidden="true">
+    <div class="scroll-progress__bar"></div>
+  </div>
+
+  <!-- ==================== MOUSE GLOW ==================== -->
+  <div class="mouse-glow" aria-hidden="true"></div>
+
+  <!-- ==================== BACKGROUND EFFECTS ==================== -->
+  <div class="bg-effects" aria-hidden="true">
+    <canvas id="particles-canvas"></canvas>
+    <div class="gradient-blob gradient-blob--1"></div>
+    <div class="gradient-blob gradient-blob--2"></div>
+    <div class="gradient-blob gradient-blob--3"></div>
+    <div class="mesh-gradient"></div>
+  </div>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <header class="header" id="header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="#hero" class="nav__logo" aria-label="Mohamed Tharik — Home">
+        <span class="nav__logo-mark">MT</span>
+        <span class="nav__logo-name">Tharik</span>
+      </a>
+
+      <ul class="nav__menu" id="nav-menu">
+        <li><a href="#about" class="nav__link">About</a></li>
+        <li><a href="#skills" class="nav__link">Skills</a></li>
+        <li><a href="#projects" class="nav__link">Projects</a></li>
+        <li><a href="#experience" class="nav__link">Experience</a></li>
+        <li><a href="#services" class="nav__link">Services</a></li>
+        <li><a href="#contact" class="nav__link">Contact</a></li>
+      </ul>
+
+      <a href="#contact" class="nav__cta btn btn--sm btn--primary magnetic">Let's Talk</a>
+
+      <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="nav__toggle-line"></span>
+        <span class="nav__toggle-line"></span>
+        <span class="nav__toggle-line"></span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero section" id="hero" aria-label="Introduction">
+      <div class="container hero__container">
+        <div class="hero__content">
+          <div class="hero__badge reveal">
+            <span class="hero__badge-dot"></span>
+            Available for opportunities
+          </div>
+
+          <p class="hero__greeting reveal">Hello, I'm</p>
+          <h1 class="hero__name reveal">
+            Mohamed <span class="gradient-text">Tharik</span>
+          </h1>
+
+          <div class="hero__roles reveal">
+            <span class="hero__roles-prefix">I'm a </span>
+            <span class="hero__roles-text" id="role-rotator" aria-live="polite">Data Analyst</span>
+          </div>
+
+          <p class="hero__tagline reveal">
+            Building beautiful digital experiences with code. Transforming raw data into actionable business insights through dashboards, visualizations, and data-driven reporting.
+          </p>
+
+          <div class="hero__actions reveal">
+            <a href="#projects" class="btn btn--primary btn--lg magnetic">
+              <span>View My Work</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="assets/resume/resume.pdf" class="btn btn--glass btn--lg magnetic" target="_blank" rel="noopener noreferrer" download="Mohamed_Tharik_Resume.pdf">
+              <svg class="btn__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="12" y1="18" x2="12" y2="12"/>
+                <polyline points="9 15 12 18 15 15"/>
+              </svg>
+              <span>Download Resume</span>
+            </a>
+          </div>
+
+          <div class="hero__social reveal">
+            <a href="https://github.com/MOHAMEDTHARIK-GIT" class="hero__social-link magnetic" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/mohamedtharik03" class="hero__social-link magnetic" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="mailto:tharikbsc2023@gmail.com" class="hero__social-link magnetic" aria-label="Send email">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero__visual reveal">
+          <div class="hero__image-wrapper">
+            <div class="hero__image-glow"></div>
+            <div class="hero__image-ring hero__image-ring--1"></div>
+            <div class="hero__image-ring hero__image-ring--2"></div>
+            <div class="hero__image-frame glass">
+              <img
+                src="assets/images/profile.jpg"
+                alt="Mohamed Tharik — Data Analyst professional portrait"
+                class="hero__image"
+                width="480"
+                height="480"
+                loading="eager"
+                fetchpriority="high"
+              >
+            </div>
+            <div class="hero__floating-card hero__floating-card--1 glass">
+              <span class="hero__floating-icon">📊</span>
+              <div>
+                <strong>HR Analytics</strong>
+                <span>Dashboard Project</span>
+              </div>
+            </div>
+            <div class="hero__floating-card hero__floating-card--2 glass">
+              <span class="hero__floating-icon">⚡</span>
+              <div>
+                <strong>Immediate</strong>
+                <span>Joiner</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="hero__scroll" aria-label="Scroll to about section">
+        <span class="hero__scroll-text">Scroll</span>
+        <div class="hero__scroll-line"></div>
+      </a>
+    </section>
+
+    <!-- ==================== ABOUT SECTION ==================== -->
+    <section class="about section" id="about" aria-label="About me">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">About Me</span>
+          <h2 class="section-title">Crafting Data Stories<br><span class="gradient-text">That Drive Decisions</span></h2>
+        </div>
+
+        <div class="about__grid">
+          <div class="about__image-col reveal">
+            <div class="about__image-wrapper">
+              <div class="about__image-glow"></div>
+              <div class="about__image-frame glass">
+                <img
+                  src="assets/images/profile.jpg"
+                  alt="Mohamed Tharik working on data analytics"
+                  class="about__image"
+                  width="400"
+                  height="500"
+                  loading="lazy"
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="about__content reveal">
+            <p class="about__text">
+              Detail-oriented and analytical fresher with a <strong>B.Sc. Computer Science</strong> degree and hands-on training in Python, SQL, Power BI, and Advanced Excel. I specialize in transforming raw data into actionable business insights through dashboards, visualizations, and data-driven reporting.
+            </p>
+            <p class="about__text">
+              From building AI-powered applications to developing responsive web projects, I bring a unique blend of technical versatility and analytical precision. Based in <strong>Chennai, India</strong>, I'm an immediate joiner seeking a Data Analyst, Business Analyst, or MIS Analyst role.
+            </p>
+
+            <div class="about__highlights">
+              <div class="about__highlight glass">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                <span>AI-Powered Applications</span>
+              </div>
+              <div class="about__highlight glass">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                <span>Responsive Web Projects</span>
+              </div>
+              <div class="about__highlight glass">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                <span>Open-Source Contributor</span>
+              </div>
+              <div class="about__highlight glass">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                <span>Data Analytics Focus</span>
+              </div>
+            </div>
+
+            <a href="assets/resume/resume.pdf" class="btn btn--primary magnetic" target="_blank" rel="noopener noreferrer" download="Mohamed_Tharik_Resume.pdf">
+              <svg class="btn__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="12" y1="18" x2="12" y2="12"/>
+                <polyline points="9 15 12 18 15 15"/>
+              </svg>
+              <span>Download Resume</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Statistics Counters -->
+        <div class="stats reveal">
+          <div class="stats__item glass">
+            <span class="stats__number" data-target="3">0</span>
+            <span class="stats__suffix">+</span>
+            <p class="stats__label">Certifications</p>
+          </div>
+          <div class="stats__item glass">
+            <span class="stats__number" data-target="5">0</span>
+            <span class="stats__suffix">+</span>
+            <p class="stats__label">Technologies</p>
+          </div>
+          <div class="stats__item glass">
+            <span class="stats__number" data-target="1">0</span>
+            <span class="stats__suffix">+</span>
+            <p class="stats__label">Years Experience</p>
+          </div>
+          <div class="stats__item glass">
+            <span class="stats__number" data-target="72">0</span>
+            <span class="stats__suffix">%</span>
+            <p class="stats__label">Academic Score</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SKILLS SECTION ==================== -->
+    <section class="skills section" id="skills" aria-label="Technical skills">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Expertise</span>
+          <h2 class="section-title">Technical <span class="gradient-text">Skills</span></h2>
+          <p class="section-subtitle">Tools and technologies I use to transform data into insights</p>
+        </div>
+
+        <div class="skills__grid">
+          <!-- Data Analysis -->
+          <div class="skill-card glass reveal" data-category="analysis">
+            <div class="skill-card__icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+            </div>
+            <h3 class="skill-card__title">Data Analysis</h3>
+            <p class="skill-card__desc">Excel, Advanced Excel, Power BI, Data Cleaning & Validation</p>
+            <div class="skill-card__skills">
+              <div class="skill-bar" data-progress="92">
+                <div class="skill-bar__header"><span>Power BI</span><span>92%</span></div>
+                <div class="skill-bar__track"><div class="skill-bar__fill"></div></div>
+              </div>
+              <div class="skill-bar" data-progress="90">
+                <div class="skill-bar__header"><span>Advanced Excel</span><span>90%</span></div>
+                <div class="skill-bar__track"><div class="skill-bar__fill"></div></div>
+              </div>
+              <div class="skill-bar" data-progress="88">
+                <div class="skill-bar__header"><span>Data Cleaning</span><span>88%</span></div>
+                <div class="skill-bar__track"><div class="skill-bar__fill"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Programming -->
+          <div class="skill-card glass reveal" data-category="programming">
+            <div class="skill-card__icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <h3 class="skill-card__title">Programming</h3>
+            <p class="skill-card__desc">Python & SQL for data processing and automation</p>
+            <div class="skill-card__skills">
+              <div class="skill-bar" data-progress="85">
+                <div class="skill-bar__header"><span>Python</span><span>85%</span></div>
+                <div class="skill-bar__track"><div class="skill-bar__fill"></div></div>
+              </div>
+              <div class="skill-bar" data-progress="82">
+                <div class="skill-bar__header"><span>SQL</span><span>82%</span></div>
+                <div class="skill-bar__track"><div class="skill-bar__fill"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Databases -->
+          <div class="skill-card glass reveal" data-category="database">
+            <div class="skill-card__icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+            </div>
+            <h3 class="skill-card__title">Databases</h3>
+            <p class="skill-card__desc">MySQL & SQLite for structured data management</p>
+            <div class="skill-card__skills">
+              <div class="skill-bar" data-progress="80">
+                <div class="skill-bar__header"><span>MySQL</span><span>80%</span></div>
+                <div class="skill-bar__track"><div class="skill-bar__fill"></div></div>
+              </div>
+              <div class="skill-bar" data-progress="78">
+                <div class="skill-bar__header"><span>SQLite</span><span>78%</span></div>
+                <div class="skill-bar__track"><div class="skill-bar__fill"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Visualization -->
+          <div class="skill-card glass reveal" data-category="viz">
+            <div class="skill-card__icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+            </div>
+            <h3 class="skill-card__title">Visualization</h3>
+            <p class="skill-card__desc">Dashboards, charts, pivot tables & conditional formatting</p>
+            <div class="skill-card__skills">
+              <div class="skill-bar" data-progress="90">
+                <div class="skill-bar__header"><span>Power BI Dashboards</span><span>90%</span></div>
+                <div class="skill-bar__track"><div class="skill-bar__fill"></div></div>
+              </div>
+              <div class="skill-bar" data-progress="88">
+                <div class="skill-bar__header"><span>Excel Charts</span><span>88%</span></div>
+                <div class="skill-bar__track"><div class="skill-bar__fill"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Web Development -->
+          <div class="skill-card glass reveal" data-category="web">
+            <div class="skill-card__icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/><line x1="12" y1="2" x2="12" y2="22"/></svg>
+            </div>
+            <h3 class="skill-card__title">Web Development</h3>
+            <p class="skill-card__desc">HTML, CSS & JavaScript for responsive experiences</p>
+            <div class="skill-card__skills">
+              <div class="skill-bar" data-progress="85">
+                <div class="skill-bar__header"><span>HTML / CSS</span><span>85%</span></div>
+                <div class="skill-bar__track"><div class="skill-bar__fill"></div></div>
+              </div>
+              <div class="skill-bar" data-progress="78">
+                <div class="skill-bar__header"><span>JavaScript</span><span>78%</span></div>
+                <div class="skill-bar__track"><div class="skill-bar__fill"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Soft Skills -->
+          <div class="skill-card glass reveal" data-category="soft">
+            <div class="skill-card__icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3 class="skill-card__title">Soft Skills</h3>
+            <p class="skill-card__desc">Professional competencies for collaborative success</p>
+            <div class="skill-card__tags">
+              <span class="skill-tag">Analytical Thinking</span>
+              <span class="skill-tag">Attention to Detail</span>
+              <span class="skill-tag">Problem Solving</span>
+              <span class="skill-tag">Communication</span>
+              <span class="skill-tag">Teamwork</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PROJECTS SECTION ==================== -->
+    <section class="projects section" id="projects" aria-label="Projects">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Portfolio</span>
+          <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+          <p class="section-subtitle">Real-world solutions that showcase my analytical and development skills</p>
+        </div>
+
+        <!-- Project Filter -->
+        <div class="projects__filter reveal">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="data">Data Analytics</button>
+          <button class="filter-btn" data-filter="web">Web Development</button>
+          <button class="filter-btn" data-filter="ai">AI Applications</button>
+        </div>
+
+        <div class="projects__grid">
+          <!-- HR Analytics Dashboard -->
+          <article class="project-card glass reveal" data-category="data">
+            <div class="project-card__image">
+              <div class="project-card__placeholder" style="--project-hue: 240">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+              </div>
+              <div class="project-card__overlay">
+                <button class="project-card__btn magnetic" data-project="hr-analytics" aria-label="View HR Analytics project details">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="project-card__content">
+              <div class="project-card__tags">
+                <span class="project-tag">Python</span>
+                <span class="project-tag">Power BI</span>
+                <span class="project-tag">Excel</span>
+              </div>
+              <h3 class="project-card__title">HR Analytics Dashboard</h3>
+              <p class="project-card__desc">End-to-end HR analytics platform tracking workforce metrics, attendance, and KPIs with interactive Power BI dashboards.</p>
+              <div class="project-card__links">
+                <button class="project-link magnetic" data-project="hr-analytics">View Details</button>
+                <a href="https://github.com/MOHAMEDTHARIK-GIT" class="project-link project-link--icon magnetic" target="_blank" rel="noopener noreferrer" aria-label="View on GitHub">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Responsive Web Portfolio -->
+          <article class="project-card glass reveal" data-category="web">
+            <div class="project-card__image">
+              <div class="project-card__placeholder" style="--project-hue: 280">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              </div>
+              <div class="project-card__overlay">
+                <button class="project-card__btn magnetic" data-project="web-portfolio" aria-label="View Web Portfolio project details">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="project-card__content">
+              <div class="project-card__tags">
+                <span class="project-tag">HTML</span>
+                <span class="project-tag">CSS</span>
+                <span class="project-tag">JavaScript</span>
+              </div>
+              <h3 class="project-card__title">Premium Portfolio Website</h3>
+              <p class="project-card__desc">Award-winning personal portfolio with glassmorphism, fluid animations, and fully responsive design.</p>
+              <div class="project-card__links">
+                <button class="project-link magnetic" data-project="web-portfolio">View Details</button>
+                <a href="https://github.com/MOHAMEDTHARIK-GIT" class="project-link project-link--icon magnetic" target="_blank" rel="noopener noreferrer" aria-label="View on GitHub">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- AI Application -->
+          <article class="project-card glass reveal" data-category="ai">
+            <div class="project-card__image">
+              <div class="project-card__placeholder" style="--project-hue: 200">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><path d="M12 2a4 4 0 0 1 4 4c0 1.95-1.4 3.58-3.25 3.93L12 22l-.75-12.07A4.001 4.001 0 0 1 12 2z"/><path d="M8.5 8.5C8.5 6.57 10.07 5 12 5"/></svg>
+              </div>
+              <div class="project-card__overlay">
+                <button class="project-card__btn magnetic" data-project="ai-app" aria-label="View AI Application project details">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="project-card__content">
+              <div class="project-card__tags">
+                <span class="project-tag">Python</span>
+                <span class="project-tag">AI/ML</span>
+                <span class="project-tag">API</span>
+              </div>
+              <h3 class="project-card__title">AI-Powered Application</h3>
+              <p class="project-card__desc">Intelligent application leveraging AI capabilities for automated data processing and smart insights generation.</p>
+              <div class="project-card__links">
+                <button class="project-link magnetic" data-project="ai-app">View Details</button>
+                <a href="https://github.com/MOHAMEDTHARIK-GIT" class="project-link project-link--icon magnetic" target="_blank" rel="noopener noreferrer" aria-label="View on GitHub">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PROJECT MODAL ==================== -->
+    <div class="modal" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+      <div class="modal__backdrop"></div>
+      <div class="modal__container glass">
+        <button class="modal__close magnetic" aria-label="Close project details">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+        <div class="modal__content" id="modal-content"></div>
+      </div>
+    </div>
+
+    <!-- ==================== EXPERIENCE SECTION ==================== -->
+    <section class="experience section" id="experience" aria-label="Work experience">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Career</span>
+          <h2 class="section-title">Work <span class="gradient-text">Experience</span></h2>
+          <p class="section-subtitle">My professional journey and milestones</p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline__line" aria-hidden="true"></div>
+
+          <article class="timeline__item reveal">
+            <div class="timeline__dot"></div>
+            <div class="timeline__card glass">
+              <span class="timeline__date">2024 — Present</span>
+              <h3 class="timeline__title">Freelance Web Developer</h3>
+              <p class="timeline__company">Self-Employed · Remote</p>
+              <ul class="timeline__list">
+                <li>Designed and developed responsive web applications for diverse clients using HTML, CSS, and JavaScript</li>
+                <li>Built modern, performance-optimized interfaces with attention to UX and accessibility standards</li>
+                <li>Collaborated with clients to translate business requirements into functional digital solutions</li>
+                <li>Managed end-to-end project delivery from concept to deployment</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline__item reveal">
+            <div class="timeline__dot"></div>
+            <div class="timeline__card glass">
+              <span class="timeline__date">Mar 2026</span>
+              <h3 class="timeline__title">Python Development Training</h3>
+              <p class="timeline__company">Infiniti Design</p>
+              <ul class="timeline__list">
+                <li>Completed intensive training in Python, SQL, HTML/CSS/JS, C, and C++</li>
+                <li>Gained hands-on experience in database design and query optimization</li>
+                <li>Applied data manipulation and reporting techniques across real-world scenarios</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline__item reveal">
+            <div class="timeline__dot"></div>
+            <div class="timeline__card glass">
+              <span class="timeline__date">2023 — 2026</span>
+              <h3 class="timeline__title">B.Sc. Computer Science</h3>
+              <p class="timeline__company">Jamal Mohamed College, Bharathidasan University</p>
+              <ul class="timeline__list">
+                <li>Graduated with 72% from an autonomous institution in Tiruchirappalli</li>
+                <li>Built foundation in programming, databases, and software development</li>
+                <li>Developed strong analytical and problem-solving capabilities</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TESTIMONIALS SECTION ==================== -->
+    <section class="testimonials section" id="testimonials" aria-label="Testimonials">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Testimonials</span>
+          <h2 class="section-title">What People <span class="gradient-text">Say</span></h2>
+        </div>
+
+        <div class="testimonials__slider reveal">
+          <div class="testimonials__track" id="testimonials-track">
+            <div class="testimonial-card glass">
+              <div class="testimonial-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <blockquote class="testimonial-card__quote">
+                "Tharik demonstrated exceptional analytical skills during his HR Analytics project. His Power BI dashboards were clean, insightful, and delivered exactly what management needed for decision-making."
+              </blockquote>
+              <div class="testimonial-card__author">
+                <div class="testimonial-card__avatar">ID</div>
+                <div>
+                  <strong>Training Mentor</strong>
+                  <span>Infiniti Design</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card glass">
+              <div class="testimonial-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <blockquote class="testimonial-card__quote">
+                "Working with Tharik on our web project was seamless. He delivered a responsive, modern website ahead of schedule with excellent attention to detail and communication throughout."
+              </blockquote>
+              <div class="testimonial-card__author">
+                <div class="testimonial-card__avatar">FC</div>
+                <div>
+                  <strong>Freelance Client</strong>
+                  <span>Web Development Project</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card glass">
+              <div class="testimonial-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <blockquote class="testimonial-card__quote">
+                "His proficiency in Python and SQL for data automation significantly reduced our manual reporting effort. Tharik has a natural talent for turning complex data into clear visual stories."
+              </blockquote>
+              <div class="testimonial-card__author">
+                <div class="testimonial-card__avatar">PM</div>
+                <div>
+                  <strong>Project Supervisor</strong>
+                  <span>HR Analytics Training</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonials__nav">
+            <button class="testimonials__btn testimonials__btn--prev magnetic" aria-label="Previous testimonial">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <div class="testimonials__dots" id="testimonials-dots"></div>
+            <button class="testimonials__btn testimonials__btn--next magnetic" aria-label="Next testimonial">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SERVICES SECTION ==================== -->
+    <section class="services section" id="services" aria-label="Services offered">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Services</span>
+          <h2 class="section-title">What I <span class="gradient-text">Offer</span></h2>
+          <p class="section-subtitle">Professional services tailored to your data and digital needs</p>
+        </div>
+
+        <div class="services__grid">
+          <article class="service-card glass reveal">
+            <div class="service-card__icon-wrap">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+            </div>
+            <h3 class="service-card__title">Data Analytics</h3>
+            <p class="service-card__desc">Transform raw data into actionable insights with Power BI dashboards, Excel reports, and statistical analysis.</p>
+          </article>
+
+          <article class="service-card glass reveal">
+            <div class="service-card__icon-wrap">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+            </div>
+            <h3 class="service-card__title">Business Reporting</h3>
+            <p class="service-card__desc">Create decision-ready visual reports with pivot tables, conditional formatting, and automated workflows.</p>
+          </article>
+
+          <article class="service-card glass reveal">
+            <div class="service-card__icon-wrap">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <h3 class="service-card__title">Web Development</h3>
+            <p class="service-card__desc">Build responsive, modern websites with premium UI/UX design and performance optimization.</p>
+          </article>
+
+          <article class="service-card glass reveal">
+            <div class="service-card__icon-wrap">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+            </div>
+            <h3 class="service-card__title">Database Solutions</h3>
+            <p class="service-card__desc">Design and optimize MySQL/SQLite databases with efficient queries for data-driven applications.</p>
+          </article>
+
+          <article class="service-card glass reveal">
+            <div class="service-card__icon-wrap">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            </div>
+            <h3 class="service-card__title">Data Automation</h3>
+            <p class="service-card__desc">Automate repetitive data workflows with Python scripts, reducing manual effort and errors.</p>
+          </article>
+
+          <article class="service-card glass reveal">
+            <div class="service-card__icon-wrap">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 2a4 4 0 0 1 4 4c0 1.95-1.4 3.58-3.25 3.93L12 22l-.75-12.07A4.001 4.001 0 0 1 12 2z"/></svg>
+            </div>
+            <h3 class="service-card__title">AI Integration</h3>
+            <p class="service-card__desc">Leverage AI-powered solutions for intelligent data processing and smart application features.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CERTIFICATIONS ==================== -->
+    <section class="certifications section" id="certifications" aria-label="Certifications">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Credentials</span>
+          <h2 class="section-title">Certifications & <span class="gradient-text">Education</span></h2>
+        </div>
+
+        <div class="certs__grid">
+          <div class="cert-card glass reveal">
+            <div class="cert-card__badge">🐍</div>
+            <h3>Python Programming</h3>
+            <p>Infiniti Design · March 2026</p>
+          </div>
+          <div class="cert-card glass reveal">
+            <div class="cert-card__badge">📊</div>
+            <h3>Power BI Certification</h3>
+            <p>Infiniti Design · April 2026</p>
+          </div>
+          <div class="cert-card glass reveal">
+            <div class="cert-card__badge">📈</div>
+            <h3>Advanced Excel</h3>
+            <p>Udemy · May 2026</p>
+          </div>
+          <div class="cert-card glass reveal">
+            <div class="cert-card__badge">🎓</div>
+            <h3>B.Sc. Computer Science</h3>
+            <p>Jamal Mohamed College · 2026 · 72%</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CONTACT SECTION ==================== -->
+    <section class="contact section" id="contact" aria-label="Contact">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Get In Touch</span>
+          <h2 class="section-title">Let's Work <span class="gradient-text">Together</span></h2>
+          <p class="section-subtitle">Have a project in mind or looking to hire? I'd love to hear from you.</p>
+        </div>
+
+        <div class="contact__grid">
+          <div class="contact__info reveal">
+            <div class="contact__card glass">
+              <div class="contact__card-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <h3>Email</h3>
+                <a href="mailto:tharikbsc2023@gmail.com">tharikbsc2023@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="contact__card glass">
+              <div class="contact__card-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div>
+                <h3>Phone</h3>
+                <a href="tel:+918508514457">+91 85085 14457</a>
+              </div>
+            </div>
+
+            <div class="contact__card glass">
+              <div class="contact__card-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <h3>Location</h3>
+                <p>Chennai, Tamil Nadu, India</p>
+              </div>
+            </div>
+
+            <div class="contact__social">
+              <a href="https://github.com/MOHAMEDTHARIK-GIT" class="contact__social-link magnetic" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+              <a href="https://www.linkedin.com/in/mohamedtharik03" class="contact__social-link magnetic" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </a>
+              <a href="mailto:tharikbsc2023@gmail.com" class="contact__social-link magnetic" aria-label="Email">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <form class="contact__form glass reveal" id="contact-form" novalidate>
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required autocomplete="name">
+              <span class="form-error" id="name-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email">
+              <span class="form-error" id="email-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Project inquiry" required>
+              <span class="form-error" id="subject-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+              <span class="form-error" id="message-error"></span>
+            </div>
+            <button type="submit" class="btn btn--primary btn--lg magnetic form-submit">
+              <span>Send Message</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+            <div class="form-success" id="form-success" hidden>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <p>Message sent successfully! I'll get back to you soon.</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="#hero" class="footer__logo">
+            <span class="nav__logo-mark">MT</span>
+            <span>Mohamed Tharik</span>
+          </a>
+          <p class="footer__tagline">Building beautiful digital experiences with code.</p>
+        </div>
+
+        <nav class="footer__nav" aria-label="Footer navigation">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="footer__social">
+          <a href="https://github.com/MOHAMEDTHARIK-GIT" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="magnetic">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/mohamedtharik03" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="magnetic">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="mailto:tharikbsc2023@gmail.com" aria-label="Email" class="magnetic">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; <span id="year"></span> Mohamed Tharik. All rights reserved.</p>
+        <p class="footer__made">Designed & Built with passion</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
